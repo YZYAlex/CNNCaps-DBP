@@ -14,7 +14,7 @@ The data and a user-friendly standalone program of CNNCaps-DBP
 - [save_dir]: The path of folder of experimental results of attention mechanism visualization.
 - [device]: cuda or cpu
 # Functionality description
-- The protein sequence in fasta format will be first fed to ESMC model to generate a embedding feature representation; then, the embedding features will be fed into the networks consisting of attention augmented convolution and capsule neural network to obatain the predcition results.
+- The protein sequence in fasta format will be first fed to ESMC model to generate a embedding feature representation; then, the embedding features will be fed into the networks consisting of attention augmented convolution, capsule neural network and multilayer perceptron to obatain the predcition results.
 # Note
 - The feature representation of ESMC will be generated named dataset_name.npy.
 - The prediction results will be displayed in the terminal after the training is finished.

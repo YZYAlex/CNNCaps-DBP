@@ -12,7 +12,7 @@ from Caps import *
 from Attention_Augmented_Conv1d import AugmentedConv1d
 
 
-class Decoder(nn.Module):
+class AttentionDecoder(nn.Module):
     def __init__(self, embedding_dim=16):
         super().__init__()
         self.attention = nn.Linear(embedding_dim, 1)
@@ -62,7 +62,7 @@ class ESMc_Caps(nn.Module):
         nn.init.uniform_(self.w_omega, -0.1, 0.1)
         nn.init.uniform_(self.u_omega, -0.1, 0.1)
 
-        self.decoder = Decoder(16)
+        self.decoder = AttentionDecoder(16)
 
     def attention_net(self, x):
         u = torch.tanh(torch.matmul(x, self.w_omega))

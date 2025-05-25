@@ -12,7 +12,7 @@ from Caps import *
 from Attention_Augmented_Conv1d import AugmentedConv1d
 
 
-class AttentionDecoder(nn.Module):
+class Decoder(nn.Module):
     def __init__(self, embedding_dim=16):
         super().__init__()
         self.attention = nn.Linear(embedding_dim, 1)
